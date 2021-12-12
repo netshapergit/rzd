@@ -1,0 +1,868 @@
+AddDefaultCharset UTF-8
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# Redirect Trailing Slashes...
+#RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Permanently redirect from www domain to non-www domain
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+################################ AUTO GENERATED ALIASES ################################
+
+						RewriteCond %{HTTP_HOST} ^systemcontrol\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/systemcontrol.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ru\.holiday\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ru.holiday/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^pra\-ton\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/pra-ton.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^praton\-pr\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/pra-ton.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^tzpe\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tzpe.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^cerkovnayalavka\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/cerkovnayalavka.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^hmntd\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/hmntd.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^interotur\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/intero-tour.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^63babyka\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/63babyka.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^advokat\-smr\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/advokat-smr.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^promalp63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/promalp63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^build\-store\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/build-store.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^samara\-iceberg\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/samara-iceberg.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^hotel\-iceberg\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/hotel-iceberg.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^penoplast\-smr\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/penoplast-smr.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^tordecor\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tordecor.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^otdelkavsamare\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/otdelkavsamare.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^teplofasada\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/teplofasada.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^roofsamara\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/roofsamara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-63\-6kclzs7alrs0f\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/grillhouse63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^penoplast\-tmn\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/penoplast-tmn.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dorprosvet\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dorprosvet.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-80aaafco9aegsjw0fzg\.xn\-\-80aswg$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/cerkovnayalavka.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^sovaudit72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sovaudit72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^b\-z72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/b-z72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^traktor\-samara\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/traktor-samara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^penoplast\-tmn2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/penoplast-tmn2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^autotrans\-liga\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/autotrans-liga.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^yep\.fi\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/yep.fi/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^penopolis\.shop$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/christmastore.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^psihologvita\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/psihologvita.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^nordstroy\-msk\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/nordstroy-msk2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^lad\-service\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/lad-service.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^riviera\-sauna72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/riviera-sauna72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kvartira\-samara\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kvartira-samara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^candy\-brand\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/candy-brand.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^praton\-training\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/praton-training.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-\-jlcb5agcpcj7gxd\.xn\-\-80aswg$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dom-pod-kluch.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dom\-pod\-kluch\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dom-pod-kluch.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^praton\-content\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/praton-content.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-63\-6kcaioe8dubiw\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ventfasad63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ventfasad63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ventfasad63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kaskad\-samara\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kaskad-samara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^remontnik63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/remontnik63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^stroiteli\.online\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/stroiteli.online/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-e1afblmlgid\.xn\-\-80asehdb$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/stroiteli.online/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^tehtrans63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tehtrans63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^idealsten\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/i-dealsten.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^elking5\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/elking5.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ecoexpert72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ecoexpert72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^aquagrad\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/aquagrad.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^presentperfect\.online\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/presentperfect.online/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^samarafasad\-s\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/samarafasad-s.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^traktor163\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/traktor-samara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^legion\-horse\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/legion-horse.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ochistrf\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ochistrf.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-h1alkew7a\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ochistrf.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-7sblebbp1asd6bm7igg\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/idealnie-steni.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^idealnie\-steni\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/idealnie-steni.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^yut72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/yut72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kk\-avtoritet\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kk-avtoritet.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^swisscentersamara\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/swisscentersamara.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^elenashabalina\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/e-lenashabalina.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^assat\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/assat.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^samarbo\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/samarbo.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ecopan72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ecopan72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kartina163\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kartina163.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vkuimmigration\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/vkuimmigration.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^netshaper\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/netshaper.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gerzog\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gerzog.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vermona\-decor\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/vermona-decor.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gorod163\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gorod163.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-163\-iddf3dap\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gorod163.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^test\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/test.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^code\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/code.netshaper.org/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^material\-sreda2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/material-sreda2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-c1adkfagrhv\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/legion-horse.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^sc\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sc.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^seti72\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/seti72.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^triodant\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/triodant.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^raduga\-turs\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/raduga-turs.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gidroizolyaciya63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gidroizolyaciya63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^styazhka\-msk\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/styazhka-expert.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ze\.firka\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ze.firka.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^triodent72\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/triodant.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^zhaluzi\-okno\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/zhaluzi-okno.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-7sbrffnduhc3o\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/zhaluzi-okno.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^artek\-stroy\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/artek-stroy.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^csc\-group\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sc.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vsp\-consult\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/assat.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^sibteh\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sibteh.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ts\-msk\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ts-msk.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^portnovskie\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/portnovskie.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^amanat\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gkamanat.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^psh\-vto\.com$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/portnovskie.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^4evergreen\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/4evergreen.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^elena\-shabalina\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/elenashabalina.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kbstroy63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kbstroy63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dolina\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dolina.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^4\-evergreen\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/4evergreen.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gk\-amanat\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gkamanat.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^pasha\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/pasha.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^not63\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/not63.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^lukss\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/lukss.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dolina2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dolina2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^npsamara\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/npsamara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ur\-cpe\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ur-cpe.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ts\-msc\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ts-msk.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^nobilia\-smr\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/nobilia-smr.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dolina3\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dolina3.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dolina4\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dolina4.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dolina5\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dolina5.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dolina10\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dolina10.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^urcpe\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ur-cpe.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^firka\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ze.firka.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^design\-ts\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/design-ts1.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^insayting\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/insayting.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^design\-ts\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ts-msk.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^artek\-stroy\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/artek-stroy.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-ftbdbaqqgarsaztf\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/intellect-gorod.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-80aaaadva2avfrg1l\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/elenashabalina.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^aleks\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/aleks.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^smm\.depsite\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/smm.depsite.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^balkon\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/balkon.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^matricabogatstva\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/matricabogatstva.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kogo\-hotyat\-muzhchiny\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kogo-hotyat-muzhchiny.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-80aaaadhf1b8ayssfhb0d\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/matricabogatstva.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-\-glcokhrkcbb2caqy3b8d3c\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kogo-hotyat-muzhchiny.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^tureckiy\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tureckiy.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-7sbbaiqdaubbblmnmje8awkhed6a0a3c9a8o9c\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tureckiy.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gazcomplect\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gazcomplect.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^turetskyforlady63\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kogo-hotyat-muzhchiny.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^turetskyforbuisness63\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tureckiy.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^makeumake\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/makeumake.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^dms\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/dmsvolga.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kvartira\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ansamara-city.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gazcomplect2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gazkomplekt.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vashglbuh\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/vashglbuh.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^novyjkvadrat\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/novyjkvadrat.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^yuristmsk\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/yuristmsk.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ostweg\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ostweg.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^tyumenneodent\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tyumenneodent.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^netshaper\.org\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/netshaper.org/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^delo\.space\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/delospace.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^nordstroy\-msk1\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/nordstroy-msk.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^systemcontrol\.pro$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sc.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^sheiprodavai\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sheiprodavai.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vorota\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/vorota.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kazak\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kazak-kadet.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kodatextile\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/kodatextile.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^en\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/en.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^box\.fashion\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/box.fashion/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^sto\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sotis-tlt.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^nord\-ek\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/nord-ek.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^promo\.systemcontrol\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/promo.systemcontrol.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^hoteltura\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/hoteltura.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^bitrix2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/bitrix.depsite.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^nord\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/shpaklevka-msk.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kvadrat\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/exroof.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^kvadrat2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/profasad-samara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^strana\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/strana.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^systemcontrol\.expert\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/systemcontrol.expert/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^pressure\-compensator\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/pressure-compensator.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^tat\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/tat-catering.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^market\.depsite\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/market.depsite.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^le\.market\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/le.market/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^sezonokno\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/sezonokno.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^auto\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/automobilist.pro/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^eda\.le\.market\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/eda.le.market/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-d1acpcelz\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks\.com$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^group\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ag24.biz/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^farmel\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/profarmel.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vip\-avto\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/vip-avto.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-\-6kcavbf0a2b2akhbekkg8d8i\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/strana.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^vorota\-smr\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/vorota-smr.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^ruholiday\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/ruholiday.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^gifts\.le\.market\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/gifts.le.market/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^skobelev\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/skobelev-history.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^novyjkvadrat2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/novyjkvadrat2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^svetlanamartin\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/svetlanamartin.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-80aaeal1ahvj0ax4h\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/novyjkvadrat2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^empiremartin\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/profitmargtin.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^skobelev\.our\-family\-history\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/skobelev-history.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^profitmargtin\.com$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/profitmargtin.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^nordstroy\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/nordstroy.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^brandmaker\.space\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/brandmaker.space/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^chaplin\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/chaplin.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^project\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/cabcomp.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^elena\-pushkarskaya\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/elena-pushkarskaya.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^jointbuy\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/jointbag.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^xn\-\-\-\-7sbbumnerp0dya\.xn\-\-p1ai$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/chaplin.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^pregrada\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/pregrada-samara.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^grafika\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/grafika.com/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^enforsys\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/enforsys.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks3\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks3.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks4\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks4.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks5\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks5.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks6\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks6.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks7\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks7.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^domleks8\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/domleks8.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^house\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/full-house-cafe.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^megasnab\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/megasnab65.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^polyus\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/polyus.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^test10\.ru$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/enforsys.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^polyus2\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/polyus2.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^yurist\-solidarnost\.ru\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/yurist-solidarnost.ru/allow/public/$1 [L]
+					
+						RewriteCond %{HTTP_HOST} ^grafika\-eng\.com\.test\.shaper\.space$ [NC]
+						RewriteCond %{REQUEST_URI} ^/site/ [NC]
+						RewriteRule ^site/(.*)$ /domains/project.grafika-eng.com/allow/public/$1 [L]
+					
+########################################################################################
+
+# Domain files
+RewriteCond %{REQUEST_URI} ^/site/ [NC]
+RewriteRule ^site/(.*)$ /domains/%{HTTP_HOST}/allow/public/$1 [L]
+
+# Not allow any files except public files
+RewriteCond %{REQUEST_URI} ^/domains/ [NC]
+RewriteCond %{REQUEST_URI} !^/domains/[^/]+/allow/public/ [NC]
+RewriteRule ^ index.php [L]
+
+# Handle Front Controller...
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]

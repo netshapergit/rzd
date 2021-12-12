@@ -1,0 +1,118 @@
+{% include 'header' %}
+
+{% set homepage = page %}
+{% set index = page %}
+{% set check = true %}
+{% for items in 1..10 if check %}
+	{% if index.parent_page|length > 0 %}
+		{% set index = index.parent_page %}
+		{% set homepage = index %}
+	{% else %}
+		{% set check = false %}
+	{% endif %}
+{% endfor %}	
+
+{% set items = [] %}
+
+{% for subpage1 in homepage.active_sub_pages %}
+		{% set items = items|merge([subpage1]) %}
+	{% if subpage1.active_sub_pages|length > 0 %}
+		{% for subpage2 in subpage1.active_sub_pages %}
+				{% set items = items|merge([subpage2]) %}
+			{% if subpage2.active_sub_pages|length > 0 %}
+				{% for subpage3 in subpage2.active_sub_pages %}
+						{% set items = items|merge([subpage3]) %}
+					{% if subpage3.active_sub_pages|length > 0 %}
+						{% for subpage4 in subpage3.active_sub_pages %}
+								{% set items = items|merge([subpage4]) %}
+							{% if subpage4.active_sub_pages|length > 0 %}
+								{% for subpage5 in subpage4.active_sub_pages %}
+										{% set items = items|merge([subpage5]) %}
+									{% if subpage5.active_sub_pages|length > 0 %}
+										{% for subpage6 in subpage5.active_sub_pages %}
+												{% set items = items|merge([subpage6]) %}
+										{% endfor %}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+{% set allItems = items %}
+
+{% set curItems = [] %}
+{% set curLayouts = [49, 51] %}
+
+{% for item in items %}
+	{% if item.layout_id in curLayouts %}
+		{% set curItems = curItems|merge([item]) %}
+	{% endif %}
+{% endfor %}
+
+{% set items = curItems %}
+
+{% set itemsByIDs = [] %}
+
+{% for item in items %}
+	{% if page.field_rzd_project_to == item.id %}
+		{% set itemsByIDs = itemsByIDs|merge([item]) %}
+	{% endif %}
+{% endfor %}
+
+<section class="rzdp rzdp--request">
+	<div class="cont">
+		<h1 class="rzdp__title">{$ page.field_header $}</h1>
+		<div class="rzdp__content">
+			{% if itemsByIDs|length > 0 %}
+			<div class="rzd-block">
+				<div class="rzd-block__title">
+					<span>Запрос</span>
+				</div>
+				<div class="rzd-block__content">
+					<a href="{$ itemsByIDs[0].path $}" class="big-link">{$ itemsByIDs[0].field_header $}</a>
+				</div>
+			</div>
+			{% endif %}
+			<div class="rzd-block">
+				<div class="rzd-block__title">
+					<span>Информация об авторе</span>
+				</div>
+				<div class="rzd-block__content">
+					<div class="rzd-subblock__line">Пользователь: {$ page.field_rzd_user $}</div>
+					<!--div class="rzd-subblock__line">Теку: {$ page.field_rzd_rip $}</div-->
+				</div>
+			</div>
+			<div class="rzd-block">
+				<div class="rzd-block__title">
+					<span>Описание</span>
+				</div>
+				<div class="rzd-block__content">
+					{$ page.field_summary $}
+				</div>
+				<div class="rzd-block__content">
+					{$ page.field_content|raw $}
+				</div>
+			</div>
+			
+			{% if page.field_rzd_file %}
+			<div class="rzd-block">
+				<div class="rzd-block__title">
+					<span>Материалы</span>
+				</div>
+				<div class="rzd-block__content">
+					<a href="/site/data/files/{$ page.field_rzd_file $}">Скачать</a>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+<script src="/site/theme/js/rzdpage.js"></script>
+
+{% include 'footer' %}

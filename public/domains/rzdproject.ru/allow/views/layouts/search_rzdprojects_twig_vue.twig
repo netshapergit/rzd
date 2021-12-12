@@ -1,0 +1,213 @@
+{% if request.input.json == 'yes' %}
+
+	{% set items = page.active_sub_pages %}
+
+	{% if request.input.query %}
+		{% set query = request.input.query|split(' ') %}
+		{% set results = [] %}
+
+		{% for item in items %}
+			{% if query|length > 0 %}
+				{% for que in query %}
+					{% if que|slice(0, -1)|length >= 3 and que|slice(0, -1)|lower in item.field_header|lower %}
+						{% set results = results|merge([item]) %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+
+		{% set items = results %}		
+
+	{% endif %}
+
+	{% set uniqResults = [] %}
+	{% set uniqIDs = [] %}
+
+	{% if items|length > 0 %}
+		{% for item in items %}
+			{% if item.id not in uniqIDs %}
+				{% set uniqResults = uniqResults|merge([item]) %}
+				{% set uniqIDs = uniqIDs|merge([item.id]) %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+	{% set items = uniqResults %}
+
+<div id="ajax-answer" data-answer="{$ uniqResults|json_encode() $}" {% if results|length == 0 and query[0] != '' %}data-empty="1"{% endif %}></div>
+
+{% else %}
+
+{% include 'header' %}
+<div class="data-pages" style="display: none;" data-answer="{$ page.active_sub_pages|json_encode() $}" {% if page.active_sub_pages|length == 0 and query[0] != '' %}data-empty="1"{% endif %}></div>
+<section class="search" id="v-search-root" data-find-inset="1" data-lid="{$ page.layout_id $}">
+	<div class="search__wrapper search__wrapper--fw">
+		<div v-show="isSearchShowlist" class="search-item search-item--list">
+			<div class="search-main">
+				<div class="search-top">
+					<div class="cont">
+						<h1 style="font-size:24px; font-weight: 100; text-transform: uppercase;">{$ page.field_header $}</h1>
+					</div>
+				</div>
+				<div class="search-filters">
+					<div class="cont">
+						<div class="filters">
+							<div class="filters__wrapper">
+								<div class="filter__group">
+									<div class="filter filter--tags">
+										<div class="tagsearch__input">
+											<vue-tags-input
+												v-model="tag"
+												:tags="tags"
+												:autocomplete-items="filteredTags"
+												@tags-changed="newTags => tags = newTags"
+												placeholder="Поиск..."
+											/>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="search-filters-cat" :class="{'search-filters-cat--active': isCatFiltersShow}">
+					<div class="search-filters-cat__actions">
+						<button class="icon-btn filter_btn" @click="isCatFiltersShow = !isCatFiltersShow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none"><path d="M18.3235 2.62752C18.714 2.23699 18.714 1.60383 18.3235 1.2133C17.933 0.822779 17.2998 0.822779 16.9093 1.2133L9.58343 8.53918L2.25764 1.21339C1.86712 0.822866 1.23396 0.822865 0.84343 1.21339C0.452906 1.60391 0.452906 2.23708 0.84343 2.6276L8.16922 9.95339L0.843499 17.2791C0.452975 17.6696 0.452974 18.3028 0.843499 18.6933C1.23402 19.0838 1.86719 19.0838 2.25771 18.6933L9.58343 11.3676L16.9092 18.6934C17.2998 19.0839 17.9329 19.0839 18.3235 18.6934C18.714 18.3029 18.714 17.6697 18.3235 17.2792L10.9976 9.95339L18.3235 2.62752Z" fill="#2D2727"/></svg>
+						</button>
+						<button class="search-filters-btn-showitems" :disabled="filteredItems.length == 0" @click="isCatFiltersShow = !isCatFiltersShow">
+							<span v-if="filteredItems.length != 0">Показать {{filteredItems.length}} элементов</span>
+							<span v-else>0 элементов</span>
+						</button>
+					</div>
+				<div class="serch-filters-main-cat__wrapper">
+					<div class="cont">
+					<div class="filters__wrapper">
+						<div class="filters__title">Фильтры</div>
+						<div class="filter__group">
+							<!--div class="filter filter--restaurants-type">
+								<div class="filter__title">Тип инновационного проекта</div>
+								<div class="filter-radios">
+									<div class="filter-radio">
+										<input type="radio" value="" name="cat-filter-restaurants-type" @change="selectedCatFilters.projects.type.items = []" id="cat-filter-restaurants-type-0">
+										<label for="cat-filter-restaurants-type-0">Все</label>
+									</div>
+									<div class="filter-radio" v-for="(item,i) in catFilters.restaurants.types">
+										<input type="radio" :value="item.value" name="cat-filter-restaurants-type" @change="selectedCatFilters.restaurants.type.items = [item.value]" :id="`cat-filter-restaurants-type-${i + 1}`">
+										<label :for="`cat-filter-restaurants-type-${i + 1}`">{{item.name}}</label>
+									</div>
+								</div>
+							</div-->
+							<div class="filter filter--restaurants-food">
+								<div class="filter__title">Текущий статус</div>
+								<div class="filter-main">
+									<div class="filter-radios">
+										<div class="filter-radio" v-for="(item,i) in catFilters.projects.types">
+											<input type="checkbox" :value="item.value" name="cat-filter-projects-type" v-model="selectedCatFilters.projects.type.items" :id="`cat-filter-projects-type-${i + 1}`">
+											<label :for="`cat-filter-projects-type-${i + 1}`">{{item.name}}</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--div class="filter filter--restaurants-other">
+								<div class="filter__title">Результат (продукт) проекта</div>
+								<div class="filter-main">
+									<div class="filter-radios">
+										<div class="filter-radio" v-for="(item,i) in catFilters.projects.products">
+											<input type="checkbox" :value="item.value" name="cat-filter-projects-product" v-model="selectedCatFilters.projects.product.items" :id="`cat-filter-products-product-${i + 1}`">
+											<label :for="`cat-filter-products-product-${i + 1}`">{{item.name}}</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filter filter--restaurants-other">
+								<div class="filter__title">Степень готовности проекта</div>
+								<div class="filter-main">
+									<div class="filter-radios">
+										<div class="filter-radio" v-for="(item,i) in catFilters.projects.readiness">
+											<input type="checkbox" :value="item.value" name="cat-filter-projects-readiness" v-model="selectedCatFilters.projects.readiness.items" :id="`cat-filter-products-readiness-${i + 1}`">
+											<label :for="`cat-filter-products-readiness-${i + 1}`">{{item.name}}</label>
+										</div>
+									</div>
+								</div>
+							</div-->
+						</div>
+						<div class="filters__action">
+							<button class="filter-reset-btn" @click.stop="resetFilters('projects')">Сбросить фильтры</button>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+				<div class="search-list search-list--skeleton" v-if="!isAppLoaded">
+					<div class="cont">
+						<div class="search-results__wrapper">
+							{% for item in 1..4 %}
+							<div class="search-card search-card--skeleton">
+								<div class="search-card__gallery"></div>
+								<div class="search-card__info">
+									<div class="search-card__text">
+										<div class="search-card__title"></div>
+										<div class="search-card__infoblock search-card__infoblock--address"> </div> 
+									</div>
+									<div class="search-card__actions"></div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="search-list" v-cloak>
+					<div class="cont">
+						<div class="search-warning" v-show="filteredItems.length == 0" v-cloak>Результатов по вашему запросу нет</div>
+						<transition-group 
+					    mode="out-in" 
+					    name="search-transition2" 
+					    tag="div" 
+					    class="search-results__wrapper"
+										  
+					>
+						<div class="rzd-card" v-for="item in pageItems"
+							:key="item.path" >
+							<div class="rzd-card__top">
+								<div class="rzd-card__title">
+									<a :href="item.path">{{ item.field_header }}</a>
+								</div>
+								<!--div class="rzd-card__block rzd-card__block--rip">
+									РИП: {{ item.field_rzd_rip }}
+								</div-->
+								<div class="rzd-card__block rzd-card__block--user">
+									Пользователь: {{ item.field_rzd_user }}
+								</div>
+								<div class="rzd-card__block rzd-card__block--desc">
+									Краткое описание: {{ item.field_summary }}
+								</div>
+							</div>
+							<div class="rzd-card__bottom">
+								<a :href="item.path">Подробнее</a>
+							</div>
+						</div>
+						
+						</transition-group>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search-item search-item--map">
+			<span class="search-switchmode" @click="scrollToList">Список</span>
+			
+		</div>
+	</div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue-slider-component@3.1.4/dist/vue-slider-component.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="/site/theme/js/search_twig.js"></script>
+{% include 'footer' %}
+
+{% endif %}

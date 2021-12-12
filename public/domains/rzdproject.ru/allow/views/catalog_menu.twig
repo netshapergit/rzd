@@ -1,0 +1,11 @@
+<div class="cmenu" id="cmenu">
+	<div class="cmenu__wrapper">
+		<div class="cmenu__list">
+			<a class="cmenu-item" v-for="item in catList" :key="item.path" :href="item.path">
+				<div class="cmenu-item__icon" v-html="item.catIcon"></div>
+				<div class="cmenu-item__title">{{item.catName}}</div>
+			</a>
+			
+		</div>
+	</div>
+</div>

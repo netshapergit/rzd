@@ -1,0 +1,34 @@
+<div class="media-body blog"> 
+	{% if item.parent_page.field_header|default('') %}
+		<div class="item_category-name">
+			<a href="{$ item.parent_page.path $}">{$ item.parent_page.field_header $}</a> 
+		</div>
+	{% endif %}
+	
+	{% if item.field_header|default('') %}
+			<h4 class="media-heading">
+				<a href="{$ item.path $}">{$ item.field_header $}</a>
+			</h4>
+	{% endif %}
+
+	{% if item.field_image|default('') %}
+		
+		<div class="media-img">
+		<a class="pull" href="{$ item.path $}">
+			<div class="icon">
+			<img class="media-object" src="/site/data/images/large/{$ item.field_image $}">
+			</div>
+		</a>
+		
+		</div>
+	{% endif %}
+
+		{% if item.field_summary|default('') %}
+				<p>{$ item.field_summary $}</p>
+		{% endif %}
+		</div>
+
+
+
+
+

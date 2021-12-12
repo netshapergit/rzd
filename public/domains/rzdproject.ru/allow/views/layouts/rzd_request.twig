@@ -1,0 +1,137 @@
+{% include 'header' %}
+
+{% set homepage = page %}
+{% set index = page %}
+{% set check = true %}
+{% for items in 1..10 if check %}
+	{% if index.parent_page|length > 0 %}
+		{% set index = index.parent_page %}
+		{% set homepage = index %}
+	{% else %}
+		{% set check = false %}
+	{% endif %}
+{% endfor %}	
+
+{% set items = [] %}
+
+{% for subpage1 in homepage.active_sub_pages %}
+		{% set items = items|merge([subpage1]) %}
+	{% if subpage1.active_sub_pages|length > 0 %}
+		{% for subpage2 in subpage1.active_sub_pages %}
+				{% set items = items|merge([subpage2]) %}
+			{% if subpage2.active_sub_pages|length > 0 %}
+				{% for subpage3 in subpage2.active_sub_pages %}
+						{% set items = items|merge([subpage3]) %}
+					{% if subpage3.active_sub_pages|length > 0 %}
+						{% for subpage4 in subpage3.active_sub_pages %}
+								{% set items = items|merge([subpage4]) %}
+							{% if subpage4.active_sub_pages|length > 0 %}
+								{% for subpage5 in subpage4.active_sub_pages %}
+										{% set items = items|merge([subpage5]) %}
+									{% if subpage5.active_sub_pages|length > 0 %}
+										{% for subpage6 in subpage5.active_sub_pages %}
+												{% set items = items|merge([subpage6]) %}
+										{% endfor %}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}
+
+{% set allItems = items %}
+
+{% set curItems = [] %}
+{% set curLayouts = [49, 51] %}
+
+{% for item in items %}
+	{% if item.layout_id in curLayouts %}
+		{% set curItems = curItems|merge([item]) %}
+	{% endif %}
+{% endfor %}
+
+{% set items = curItems %}
+
+{% set itemsByIDs = [] %}
+
+{% for item in items %}
+	{% if item.field_rzd_project_to == page.id %}
+		{% set itemsByIDs = itemsByIDs|merge([item]) %}
+	{% endif %}
+{% endfor %}
+
+<section class="rzdp rzdp--request">
+	<div class="cont">
+		<h1 class="rzdp__title">{$ page.field_header $}</h1>
+		<div class="rzdp__content">
+			<div class="rzdp-tabs">
+				<div class="rzdp-tabs-controls">
+					<div class="rzdp-tabs-control">
+						<a href="#" class="rzdp-tabs-control__link" data-tab="request">Описание</a>
+					</div>
+					<div class="rzdp-tabs-control">
+						<a href="#" class="rzdp-tabs-control__link" data-tab="projects">Предложения</a>
+					</div>
+				</div>
+				<div class="rzdp-tabs-main">
+					<div class="rzdp-tab" data-tab="projects">
+						<div class="rzdp-tab__content">
+							<div class="rzd-cards">
+								{% for item in itemsByIDs %}
+									{% include 'rzd_card' %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="rzdp-tab" data-tab="request">
+						<div class="rzdp-tab__content">
+							<div class="rzd-block">
+								<div class="rzd-block__title">
+									<span>Описание запроса</span>
+								</div>
+								<div class="rzd-block__content">
+									{$ page.field_rzd_desc|raw $}
+								</div>
+							</div>
+							<div class="rzd-block">
+								<div class="rzd-block__title">
+									<span>Требования к предложениям</span>
+								</div>
+								<div class="rzd-block__content">
+									{$ page.field_rzd_reqs|raw $}
+								</div>
+							</div>
+							<div class="rzd-block">
+								<div class="rzd-block__title">
+									<span>Комментарии</span>
+								</div>
+								<div class="rzd-block__content">
+									{$ page.field_rzd_comments|raw $}
+								</div>
+							</div>
+							{% if page.field_rzd_file %}
+							<div class="rzd-block">
+								<div class="rzd-block__title">
+									<span>Материалы</span>
+								</div>
+								<div class="rzd-block__content">
+									<a href="/site/data/files/{$ page.field_rzd_file $}">Скачать</a>
+								</div>
+							</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+<script src="/site/theme/js/rzdpage.js"></script>
+
+{% include 'footer' %}
